@@ -1,11 +1,16 @@
 const webpack = require('webpack')
 const exportPath = require('path')
 
-let plugins = []
-let env = process.env.WEBPACK_ENV
-let opfile = 'main'
+let plugins = []			//Plugins for webpack
+let env = process.env.WEBPACK_ENV			//Node Environment also for Vue
+let opfile = 'main'			//Export filename
 
+/**
+ * Setup the WEBPACK_ENV for production or dev
+ * and setup minifying accordingly
+ */
 if (env === 'production') {
+	//Get our minification going for js
 	const UglifyjsPlugin = require('uglifyjs-webpack-plugin')
 
 	plugins.push(new UglifyjsPlugin({
@@ -30,6 +35,9 @@ if (env === 'production') {
 	opfile = opfile + '.js'
 }
 
+/**
+ * The main configuration to be exported for Webpack
+ */
 const config = {
 	entry: './src/main.js',
 	output: {
@@ -55,4 +63,7 @@ const config = {
 	plugins
 }
 
+/**
+ * Export our config
+ */
 module.exports = config
