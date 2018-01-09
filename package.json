@@ -1,0 +1,29 @@
+{
+  "name": "vue-webpack",
+  "version": "0.0.1",
+  "description": "A VueJS Template with Webpack as a bundler",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
+    "build": "WEBPACK_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshHeart/vue-webpack.git"
+  },
+  "author": "Ashweyth Sunil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshHeart/vue-webpack/issues"
+  },
+  "homepage": "https://github.com/AshHeart/vue-webpack#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "vue": "^2.5.13",
+    "webpack": "^3.10.0"
+  }
+}
